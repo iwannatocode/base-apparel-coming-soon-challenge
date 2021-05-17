@@ -1,0 +1,140 @@
+@font-face {
+    font-family: font;
+    src: url(../static/JosefinSans-Light.ttf);
+}
+@font-face {
+    font-family: font_bold;
+    src: url(../static/JosefinSans-SemiBold.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: font;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;
+}
+.main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 20% 80%;
+    max-width: 900px;
+    /* border: 1px solid black; */
+    background: url(../images/bg-pattern-desktop.svg) 0px -20px/600px 500px;
+    
+
+}
+.card{
+    /* background: url(../images/bg-pattern-desktop.svg) no-repeat;
+    background-size: cover; */
+    grid-area: 2/1/ 3/2;
+}
+.logo{
+    width: 300px;
+    margin:  25px auto 40px;
+}
+.logo img{
+    width: 110px;
+}   
+.lema{
+    font-size: 42px;
+    max-width: 300px;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-family: font_bold;
+    color: rgba(0, 0, 0, 0.747);
+}
+.were{
+    font-weight: 100;
+    color: hsl(0, 36%, 70%);
+    font-family: font;
+}
+.paragraph{
+    max-width: 300px;
+    margin: 15px auto 30px;
+    font-size: 11px;
+    color: hsl(0, 36%, 70%);
+    padding: 5px;
+}
+.form{
+    display: flex;
+    width: 300px;   
+    margin: auto;
+}
+.email{
+    border-radius: 50px;
+    height: 40px;
+    width: 250px;
+    padding-left: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.075);
+}
+.btn{ 
+    width: 75px;
+    height: 40px;
+    border-radius: 50px;
+    /* background:  ; */
+    background:  hsl(0, 85%, 80%) url(../images/icon-arrow.svg)  30px 10px/9px no-repeat;
+    position: relative;
+    z-index: 2;
+    margin-left: -40px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.5s;
+}
+.img_cont{
+    display: grid;
+    grid-area: 1/2/ 3/3;
+}
+img{
+    max-width: 100%;
+}
+.btn:hover{
+    background:  hsl(0, 79%, 87%) url(../images/icon-arrow.svg)  30px 10px/9px no-repeat;
+    box-shadow: 1px 1px 10px 1px rgba(70, 66, 66, 0.479);
+}
+::placeholder{
+    color: hsla(0, 36%, 70%, 0.377);
+}
+@media only screen  and (max-width: 700px){
+    .main{
+        min-width: 320px;
+        position: relative;
+        display: grid;
+        grid-template-rows: 8% 47% 45%;
+        grid-template-columns: auto;
+        max-width: 330px;
+        height: 600px;
+        background: url(../images/bg-pattern-desktop.svg) 0px 120px/600px 500px;
+
+    }
+    .logo{
+        grid-area: 1/1/ 2/2;
+        margin-top: 10px;
+    }
+    .logo img{
+      width: 90px;  
+    }
+    .img_cont{
+        grid-area: 2/1/ 3/2;
+    }
+    .card{
+        grid-area: 3/1/ 4/2;
+    }
+    .lema{
+        
+        text-align: center;
+        font-size: 35px;
+    }
+    p{
+        text-align: center;
+    }
+}
